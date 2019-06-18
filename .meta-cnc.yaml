@@ -75,7 +75,7 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-objects/entry[@name='PC']/host-info/criteria/os/contains" cookie="7371232491592210"><Microsoft>All</Microsoft></request>
     file: 2-hip_objects.xml
   - name: hip_profiles
-    xpath:
+    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-profiles/entry[@name='Is_Apple']
     file: 3-hip_profiles.xml
   - name: apply_to_sec_policies
     xpath:
