@@ -72,7 +72,7 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Mobile_User_Template']/config/shared/log-settings/system/match-list/entry[@name='GPCS-Mobile-System']
     file: 1-hip_logs.xml
   - name: hip_objects
-    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-objects/entry[@name='PC']/host-info/criteria/os/contains" cookie="7371232491592210"><Microsoft>All</Microsoft></request>
+    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-objects/entry[@name='PC']
     file: 2-hip_objects.xml
   - name: hip_profiles
     xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-profiles/entry[@name='Is_Apple']
