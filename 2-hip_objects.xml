@@ -1,18 +1,5 @@
 
 <hip-objects>
-      <entry name="PC">
-        <host-info>
-          <criteria>
-            <os>
-              <contains>
-                <Microsoft>All</Microsoft>
-              </contains>
-            </os>
-          </criteria>
-        </host-info>
-        <disable-override>no</disable-override>
-        <description>Any Microsoft Windows device</description>
-      </entry>
       <entry name="HIP_Check_Apple-2">
         <host-info>
           <criteria>
