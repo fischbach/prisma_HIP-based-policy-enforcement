@@ -13,33 +13,7 @@
         <disable-override>no</disable-override>
         <description>Any Microsoft Windows device</description>
       </entry>
-      <entry name="MacOS">
-        <host-info>
-          <criteria>
-            <os>
-              <contains>
-                <Apple>Mac OS X</Apple>
-              </contains>
-            </os>
-          </criteria>
-        </host-info>
-        <disable-override>no</disable-override>
-        <description>MacBooks</description>
-      </entry>
-      <entry name="GOOGLE">
-        <host-info>
-          <criteria>
-            <os>
-              <contains>
-                <Google>All</Google>
-              </contains>
-            </os>
-          </criteria>
-        </host-info>
-        <disable-override>no</disable-override>
-        <description>Android or Chrome devices</description>
-      </entry>
-      <entry name="HIP_Check_Apple-1">
+      <entry name="HIP_Check_Apple-2">
         <host-info>
           <criteria>
             <os>
@@ -47,16 +21,6 @@
                 <Apple>All</Apple>
               </contains>
             </os>
-          </criteria>
-        </host-info>
-        <disable-override>no</disable-override>
-      </entry>
-      <entry name="GP_Version">
-        <host-info>
-          <criteria>
-            <client-version>
-              <is>4.1.9-7</is>
-            </client-version>
           </criteria>
         </host-info>
         <disable-override>no</disable-override>

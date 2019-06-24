@@ -1,73 +1,21 @@
-# skillet preamble information used by panhandler
-# ---------------------------------------------------------------------
-# unique snippet name
-name: prisma_HHIP-based-policy-enforcement
-# label used for menu selection
+
+name: prisma_HIP-based-policy-enforcement
 label: Hip Enabled Security Policies for GlobalProtect
 description: Prisma POC- addition to configure host information profile objects and profiles to be applied to policies.
-
-# type of device configuration
-# common types are panorama, panos, and template
-# https://github.com/PaloAltoNetworks/panhandler/blob/develop/docs/metadata_configuration.rst
-type: panos
-# preload static or default-based templates
+type: panorama-gpcs
 extends:
 
-# grouping of like snippets for dynamic menu creation in panhandler
 labels:
   collection:
-    - Prisma-Access
-
-# ---------------------------------------------------------------------
-# end of preamble section
-
-# variables section
-# ---------------------------------------------------------------------
-# variables used in the configuration templates
-# type_hint defines the form field used by panhandler
-# type_hints can be text, ip_address, or dropdown
+    - gpcs
 
 variables:
   - name: gateway_name
     description: Name of the gateway
     default: Gateway-1
     type_hint: This is the name of the gateway
-#
-# This variable is used in the apps.xml code - comment out if not using this .xml
-# - name: streaming_app
-#   description: name of the streaming app
-#   default: netflix-streaming
-#   type_hint: dropdown
-#   dd_list:
-#     - key: netflix-streaming
-#       value: netflix-streaming
-#     - key: youtube-streaming
-#       value: youtube-streaming
-#     - key: sling
-#       value: sling
-#     - key: vimeo-base
-#       value: vimeo-base
-#     - key: xfinity-tv
-#       value: xfinity-tv
-#     - key: youku-base
-#       value: youku-base
-#     - key: hulu-base
-#       value: hulu-base
-#     - key: dailymotion
-#       value: dailymotion
-#
-# ---------------------------------------------------------------------
-# end of variables section
 
-# snippets section
-# ---------------------------------------------------------------------
-# snippets used for api configuration including xpath and element as file name
-# files will load in the order listed
-#
 snippets:
-#  - name: gateway
-#    xpath: /config/devices/entry[@name='localhost.localdomain']/network/tunnel/global-protect-gateway
-#    file: gateway.xml
   - name: hip_logs
     xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Mobile_User_Template']/config/shared/log-settings/system/match-list/entry[@name='GPCS-Mobile-System']
     file: 1-hip_logs.xml
@@ -80,8 +28,3 @@ snippets:
   - name: apply_to_sec_policies
     xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/pre-rulebase/security/rules/entry
     file: 4-apply_to_sec_policies.xml
-#  - name: decrypt
-#    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/setting/ssl-decrypt
-#    file: decrypt.xml
-# ---------------------------------------------------------------------
-# end of snippets section
