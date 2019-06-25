@@ -10,20 +10,28 @@ labels:
     - gpcs
 
 variables:
-  - name: gateway_name
-    description: Name of the gateway
-    default: Gateway-1
-    type_hint: This is the name of the gateway
+  - name: HIP-CHECK-NAME
+    description: Name of the HIP object
+    default: MacOS
+    type_hint: This is the name of the HIP object
+  - name: HIP-PROFILE-NAME
+    description: Name of HIP profile
+    default: Is_Apple
+    type_hint: This is the name of the HIP profile
+  - name: SEC-RULE-NAME
+    description: Name of the security policy
+    default: Apple-Trust-to-Trust
+    type_hint: Name of the security policy
 
 snippets:
   - name: hip_logs
     xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Mobile_User_Template']/config/shared/log-settings/system/match-list/entry[@name='GPCS-Mobile-System']
     file: 1-hip_logs.xml
   - name: hip_objects
-    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-objects/entry[@name='PC']
+    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-objects
     file: 2-hip_objects.xml
   - name: hip_profiles
-    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-profiles/entry[@name='Is_Apple']
+    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-profiles
     file: 3-hip_profiles.xml
   - name: apply_to_sec_policies
     xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/pre-rulebase/security/rules/entry

@@ -1,15 +1,14 @@
+<entry name="{{ HIP-CHECK-NAME }}" loc="Mobile_User_Device_Group">
+      <host-info>
+        <criteria>
+          <os>
+            <contains>
+              <Apple>Mac OS X</Apple>
+            </contains>
+          </os>
+        </criteria>
+      </host-info>
+      <disable-override>no</disable-override>
+      <description>Apple Products</description>
+    </entry>
 
-<hip-objects>
-      <entry name="HIP_Check_Apple-2">
-        <host-info>
-          <criteria>
-            <os>
-              <contains>
-                <Apple>All</Apple>
-              </contains>
-            </os>
-          </criteria>
-        </host-info>
-        <disable-override>no</disable-override>
-      </entry>
-    </hip-objects>

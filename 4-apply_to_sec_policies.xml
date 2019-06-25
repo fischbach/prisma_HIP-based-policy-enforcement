@@ -1,5 +1,5 @@
 
-       <entry name="XGPCS-Mobile-Trust-to-Trust" loc="Mobile_User_Device_Group">
+       <entry name="{{ SEC-RULE-NAME }}" loc="Mobile_User_Device_Group">
       <target>
         <negate>no</negate>
       </target>

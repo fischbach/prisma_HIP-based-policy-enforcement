@@ -1,4 +1,4 @@
-<entry name="Is_Apple" loc="Mobile_User_Device_Group">
-      <match>"MacOS"</match>
-      <description>Any MacBook</description>
+<entry name="{{ HIP-PROFILE-NAME}}" loc="Mobile_User_Device_Group">
+      <match>"{{ HIP-CHECK-NAME "</match>
+      <description>Any Apple Product</description>
     </entry>
