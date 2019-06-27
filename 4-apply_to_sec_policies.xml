@@ -4,10 +4,10 @@
         <negate>no</negate>
       </target>
       <to>
-        <member>GPCS-Mobile-trust</member>
+        <member>ZONE_TRUST</member>
       </to>
       <from>
-        <member>GPCS-Mobile-trust</member>
+        member>ZONE_TRUST</member>
       </from>
       <source>
         <member>any</member>
@@ -31,14 +31,14 @@
         <member>Is_Apple</member>
       </hip-profiles>
       <action>allow</action>
-      <log-setting>GPCS-Mobile-Logging</log-setting>
+      <log-setting>{{ LOG-FILTER-NAME }}</log-setting>
       <profile-setting>
         <profiles>
           <url-filtering>
-            <member>GPCSCE</member>
+            <member>default</member>
           </url-filtering>
           <file-blocking>
-            <member>basic file blocking</member>
+            <member>default</member>
           </file-blocking>
           <virus>
             <member>default</member>
@@ -53,7 +53,7 @@
             <member>default</member>
           </wildfire-analysis>
           <data-filtering>
-            <member>GPCSCE-Mobile</member>
+            <member>default</member>
           </data-filtering>
         </profiles>
       </profile-setting>

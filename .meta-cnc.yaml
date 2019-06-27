@@ -14,6 +14,14 @@ variables:
     description: Name of the HIP object
     default: MacOS
     type_hint: This is the name of the HIP object
+  - name: TRUST-ZONE-NAME
+    description: Name of the Trust zone
+    default: GPCS_Mobile_trust
+    type_hint: This is the name of the zone defined for the intranet
+  - name: LOG-FILTER-NAME
+    description: Name of the log filter
+    default: GPCS-Mobile-Logging
+    type_hint: This is the name of the log filter
   - name: HIP-PROFILE-NAME
     description: Name of HIP profile
     default: Is_Apple
