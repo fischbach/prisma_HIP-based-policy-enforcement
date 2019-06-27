@@ -32,6 +32,15 @@ variables:
     type_hint: Name of the security policy
 
 snippets:
+  - name: gpcs_templates
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template
+    file: gpcs_templates.xml
+  - name: gpcs_template_stacks
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template-stack
+    file: gpcs_template_stacks.xml
+  - name: mobile_user_devicegroup
+    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group
+    file: gpcs_devicegroup.xml
   - name: hip_logs
     xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Mobile_User_Template']/config/shared/log-settings/system/match-list/entry[@name='GPCS-Mobile-System']
     file: 1-hip_logs.xml
