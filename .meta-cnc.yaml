@@ -11,20 +11,20 @@ labels:
 
 variables:
   - name: HIP-CHECK-NAME
-    description: Name of the HIP object
+    description: What do you want to name the HIP object
     default: MacOS
     type_hint: text
+  - name: HIP-PROFILE-NAME
+    description: What do you want to name the HIP profile
+    default: Is_Apple
+    type_hint: text
   - name: TRUST-ZONE-NAME
-    description: Name of the Trust zone
+    description: What is the name of the Trust zone
     default: GPCS_Mobile_trust
     type_hint: text
   - name: LOG-FILTER-NAME
-    description: Name of the log filter
+    description: What is the name of the log filter
     default: GPCS-Mobile-Logging
-    type_hint: text
-  - name: HIP-PROFILE-NAME
-    description: Name of HIP profile
-    default: Is_Apple
     type_hint: text
   - name: SEC-RULE-NAME
     description: Name of the security policy
