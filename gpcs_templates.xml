@@ -1,5 +1,5 @@
 
- <entry name="{{ Mobile-User-Template }}">
+ <entry name="Mobile_User_Template">
   <settings>
     <default-vsys>vsys1</default-vsys>
   </settings>

@@ -10,30 +10,26 @@ labels:
     - gpcs
 
 variables:
-  - name: Mobile-User-Template
-  - description: Name of the mobile users template
-  - Default: Mobile_User_Template
-  - type_hint: This is the name to be given to the template for mobile users
   - name: HIP-CHECK-NAME
     description: Name of the HIP object
     default: MacOS
-    type_hint: This is the name of the HIP object
+    type_hint: text
   - name: TRUST-ZONE-NAME
     description: Name of the Trust zone
     default: GPCS_Mobile_trust
-    type_hint: This is the name of the zone defined for the intranet
+    type_hint: text
   - name: LOG-FILTER-NAME
     description: Name of the log filter
     default: GPCS-Mobile-Logging
-    type_hint: This is the name of the log filter
+    type_hint: text
   - name: HIP-PROFILE-NAME
     description: Name of HIP profile
     default: Is_Apple
-    type_hint: This is the name of the HIP profile
+    type_hint: text
   - name: SEC-RULE-NAME
     description: Name of the security policy
     default: Apple-Trust-to-Trust
-    type_hint: Name of the security policy
+    type_hint: text
 
 snippets:
   - name: gpcs_templates
