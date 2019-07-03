@@ -1,7 +1,7 @@
 <entry name="Mobile_User_Template_Stack">
   <templates>
     <member>Mobile_User_Template</member>
-    <member>iron-skillet</member>
+    <member>Mobile_User_Template_Stack</member>
   </templates>
   <description> Template Stack (Managed by the GlobalProtect cloud service plugin)</description>
 </entry>
