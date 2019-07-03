@@ -10,6 +10,10 @@ labels:
     - gpcs
 
 variables:
+  - name: Mobile-User-Template
+  - description: Name of the mobile users template
+  - Default: Mobile_User_Template
+  - type_hint: This is the name to be given to the template for mobile users
   - name: HIP-CHECK-NAME
     description: Name of the HIP object
     default: MacOS
