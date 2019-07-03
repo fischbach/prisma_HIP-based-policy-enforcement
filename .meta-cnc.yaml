@@ -36,7 +36,7 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/template
     file: gpcs_templates.xml
   - name: gpcs_template_stacks
-    xpath: /config/devices/entry[@name='localhost.localdomain']/template-stack
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template-stack/entry
     file: gpcs_template_stacks.xml
   - name: mobile_user_devicegroup
     xpath: /config/devices/entry[@name='localhost.localdomain']/device-group
