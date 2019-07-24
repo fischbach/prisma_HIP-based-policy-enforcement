@@ -2,13 +2,16 @@
 name: prisma_HIP-based-policy-enforcement
 label: Hip Enabled Security Policies for GlobalProtect
 description: Prisma POC- addition to configure host information profile objects and profiles to be applied to policies.
-type: panorama-gpcs
+# type of device configuration
+type: panos
 extends:
 
 labels:
   collection:
     - GlobalProtect Basic
 
+# variables used in the configuration templates
+# type_hint defines the form field type in pan-cnc
 variables:
   - name: HIP-CHECK-NAME
     description: What do you want to name the HIP object
@@ -32,6 +35,12 @@ variables:
 #    type_hint: text
 
 snippets:
+  - name: hip_objects
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/hip-objects/
+    file: 2-hip_objects.xml
+  - name: hip_profiles
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/hip-profiles/
+    file: 3-hip_profiles.xml
 #  - name: gpcs_templates
 #    xpath: /config/devices/entry[@name='localhost.localdomain']/template
 #    file: gpcs_templates.xml
@@ -44,12 +53,6 @@ snippets:
 #  - name: hip_logs
 #    xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Mobile_User_Template']/config/shared/log-settings/system/match-list/entry[@name='GPCS-Mobile-System']
 #    file: 1-hip_logs.xml
-  - name: hip_objects
-    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='{{ DEVICE-GROUP }}']/profiles/hip-objects
-    file: 2-hip_objects.xml
-  - name: hip_profiles
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/hip-profiles/
-    file: 3-hip_profiles.xml
 #  - name: apply_to_sec_policies
 #    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='{{ DEVICE-GROUP }}']/pre-rulebase/security/rules/entry
 #    file: 4-apply_to_sec_policies.xml
