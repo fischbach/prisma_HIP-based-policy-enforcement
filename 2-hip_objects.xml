@@ -1,4 +1,4 @@
- <entry name="{{ HIP-CHECK-NAME">
+ <entry name="{{ HIP-CHECK-NAME }}">
       <host-info>
         <criteria>
           <os>
