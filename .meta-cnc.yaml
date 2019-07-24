@@ -12,7 +12,7 @@ labels:
 variables:
   - name: DEVICE-GROUP
     description: What is the device group
-    default: Mobile_User_Device_Group
+    default: "User-ID DG Service Connection"
     type_hint: text
   - name: HIP-CHECK-NAME
     description: What do you want to name the HIP object
