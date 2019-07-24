@@ -10,6 +10,10 @@ labels:
     - gpcs
 
 variables:
+  - name: DEVICE-GROUP
+    description: What is the device group
+    default: Mobile_User_Device_Group
+    type_hint: text
   - name: HIP-CHECK-NAME
     description: What do you want to name the HIP object
     default: MacOS
@@ -18,38 +22,38 @@ variables:
     description: What do you want to name the HIP profile
     default: Is_Apple
     type_hint: text
-  - name: TRUST-ZONE-NAME
-    description: What is the name of the Trust zone
-    default: GPCS_Mobile_trust
-    type_hint: text
-  - name: LOG-FILTER-NAME
-    description: What is the name of the log filter
-    default: GPCS-Mobile-Logging
-    type_hint: text
-  - name: SEC-RULE-NAME
-    description: Name of the security policy
-    default: Apple-Trust-to-Trust
-    type_hint: text
+#  - name: TRUST-ZONE-NAME
+#    description: What is the name of the Trust zone
+#    default: GPCS_Mobile_trust
+#    type_hint: text
+#  - name: LOG-FILTER-NAME
+#    description: What is the name of the log filter
+#    default: GPCS-Mobile-Logging
+#    type_hint: text
+#  - name: SEC-RULE-NAME
+#    description: Name of the security policy
+#    default: Apple-Trust-to-Trust
+#    type_hint: text
 
 snippets:
-  - name: gpcs_templates
-    xpath: /config/devices/entry[@name='localhost.localdomain']/template
-    file: gpcs_templates.xml
-  - name: gpcs_template_stacks
-    xpath: /config/devices/entry[@name='localhost.localdomain']/template-stack/entry
-    file: gpcs_template_stacks.xml
-  - name: mobile_user_devicegroup
-    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group
-    file: gpcs_devicegroup.xml
-  - name: hip_logs
-    xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Mobile_User_Template']/config/shared/log-settings/system/match-list/entry[@name='GPCS-Mobile-System']
-    file: 1-hip_logs.xml
+#  - name: gpcs_templates
+#    xpath: /config/devices/entry[@name='localhost.localdomain']/template
+#    file: gpcs_templates.xml
+#  - name: gpcs_template_stacks
+#    xpath: /config/devices/entry[@name='localhost.localdomain']/template-stack/entry
+#    file: gpcs_template_stacks.xml
+#  - name: mobile_user_devicegroup
+#    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group
+#    file: gpcs_devicegroup.xml
+#  - name: hip_logs
+#    xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Mobile_User_Template']/config/shared/log-settings/system/match-list/entry[@name='GPCS-Mobile-System']
+#    file: 1-hip_logs.xml
   - name: hip_objects
-    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-objects
+    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='{{ DEVICE-GROUP }}']/profiles/hip-objects
     file: 2-hip_objects.xml
   - name: hip_profiles
-    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/profiles/hip-profiles
+    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='{{ DEVICE-GROUP }}']/profiles/hip-profiles
     file: 3-hip_profiles.xml
-  - name: apply_to_sec_policies
-    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Mobile_User_Device_Group']/pre-rulebase/security/rules/entry
-    file: 4-apply_to_sec_policies.xml
+#  - name: apply_to_sec_policies
+#    xpath: /config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='{{ DEVICE-GROUP }}']/pre-rulebase/security/rules/entry
+#    file: 4-apply_to_sec_policies.xml

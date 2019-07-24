@@ -1,4 +1,4 @@
-<entry name="{{ HIP-CHECK-NAME }}" loc="Mobile_User_Device_Group">
+<entry name="{{ HIP-CHECK-NAME }}" loc="{{ DEVICE-GROUP }}">
       <host-info>
         <criteria>
           <os>
