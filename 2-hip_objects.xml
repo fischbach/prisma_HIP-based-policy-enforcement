@@ -1,4 +1,4 @@
-<entry name="{{ HIP-CHECK-NAME }}" loc="{{ DEVICE-GROUP }}">
+ <entry name="{{ HIP-CHECK-NAME">
       <host-info>
         <criteria>
           <os>
@@ -8,7 +8,6 @@
           </os>
         </criteria>
       </host-info>
-      <disable-override>no</disable-override>
-      <description>Apple Products</description>
+      <description>Device connecting is using the MacOS X operating system</description>
     </entry>
 
