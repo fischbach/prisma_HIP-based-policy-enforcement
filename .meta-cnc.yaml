@@ -13,7 +13,7 @@ labels:
 # variables used in the configuration templates
 # type_hint defines the form field type in pan-cnc
 variables:
-  - name: hip_check_name
+  - name: hip_object_name
     description: What do you want to name the HIP object
     default: MacOS
     type_hint: text
