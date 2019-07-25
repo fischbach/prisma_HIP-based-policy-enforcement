@@ -7,17 +7,17 @@ type: panos
 extends:
 
 labels:
-  collection:
-    - GlobalProtect Basic
+    collection:
+    - GlobalProtect Basic HIP
 
 # variables used in the configuration templates
 # type_hint defines the form field type in pan-cnc
 variables:
-  - name: HIP-CHECK-NAME
+  - name: hip_check_name
     description: What do you want to name the HIP object
     default: MacOS
     type_hint: text
-  - name: HIP-PROFILE-NAME
+  - name: hip_profile_name
     description: What do you want to name the HIP profile
     default: Is_Apple_Device
     type_hint: text

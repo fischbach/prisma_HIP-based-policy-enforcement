@@ -1,4 +1,4 @@
-    <entry name="{{ HIP-PROFILE-NAME }}">
-      <match>"{{ HIP-CHECK-NAME }}"</match>
+    <entry name="{{ hip_profile_name }}">
+      <match>"{{ hip_check_name }}"</match>
       <description>Is an Apple Mac</description>
     </entry>
