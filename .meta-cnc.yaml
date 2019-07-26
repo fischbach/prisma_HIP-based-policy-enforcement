@@ -36,10 +36,10 @@ variables:
 
 snippets:
   - name: hip_objects
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/hip-objects/
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/hip-objects
     file: 2-hip_objects.xml
   - name: hip_profiles
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/hip-profiles/
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/hip-profiles
     file: 3-hip_profiles.xml
 #  - name: gpcs_templates
 #    xpath: /config/devices/entry[@name='localhost.localdomain']/template
